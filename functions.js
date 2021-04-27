@@ -240,7 +240,7 @@ function createDonut(){
   submitNewDonut.onclick = function() {
     let newDonut = donutTypeEntry.value;
     let newPrice = donutPriceEntry.value;
-    newPrice.toFixed(2);
+    //newPrice.toFixed(2);
 
     if(newDonut.length < 0 || newDonut.length > 255)
     {
