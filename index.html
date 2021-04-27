@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link href="./main.css" rel="stylesheet">
+    <script src="./functions.js" type='text/javascript'></script>
+</header>
+<body>
+    <div id="title">
+        <h1>Donut Shop Database</h1>
+    </div>
+    <div id="shopSelectionBox">
+        <select id="shopName" onclick=getShopNames()>
+            <option value="">Select a Shop Name</option>
+        </select>
+        <button input type="submit" id="submitShopName" onclick=getShopID()>Submit</button>
+    </div>
+    <div id="menuSelectionBox">
+        <button input type="submit" id="newShop" onclick=createNewShop()>Create New Shop</button>
+        <button input type="submit" id="order" onclick=orderDonuts()>Place Order</button>
+        <button input type="submit" id="add" onclick=addDonuts()>Add Donuts</button>
+        <button input type="submit" id="newDonut" onclick=createDonut()>Create New Donut</button>
+        <button input type="submit" id="inventory" onclick=displayInventory()>Display Shop Inventory</button>
+        <button input type="submit" id="revenue" onclick=displayRevenue()>Display Shop Revenue</button>
+    </div>
+    <div id="addNewShopModal" class="modal">
+        <h1>Create a New Donut Shop</h1>
+        <div id="newShopContainer">
+            <label for="donutNameEntry">Donut Shop Name</label>
+            <input type="text" id="donutNameEntry">
+            <button type="submit" id="submitNewShop">Submit</button>
+            <button type="submit" id="exitNewShop">Exit</button>
+        </div>
+    </div>
+    <div id="inventoryDisplayModal" class="modal">
+        <h1>The Menu</h1>
+        <div id="donutShopInventory">
+            <table id="inventoryTable">
+                <tr>
+                    <th id="donutName">Donut Name</th>
+                    <th id="donutPrice">Price</th>
+                    <th id="donutAmount">Quantity</th>
+                </tr>
+            </table>
+        </div>
+        <button input type="submit" id="exitInventoryModal">Exit</button>
+    </div>
+    <div id="orderDonutsModal" class="modal">
+        <h1>Order</h1>
+        <div id="donutShopMenu">
+            <table id="menuTable">
+                <tr>
+                    <th id="donutName">Donut Name</th>
+                    <th id="donutPrice">Price</th>
+                </tr>
+            </table>
+        </div>
+        <p>Please select the donut type and quantity you would like to order</p>
+        <div id="orderContainer">
+            <select id="donutNameList" onclick=getShopDonuts()>
+                <option value="" id="donutName">Select Donut</option>
+            </select>
+            <input type="number" id="donutNum" min="0" max="100">
+        </div>
+        <button input type="submit" id="addAnotherDonut">Add Another Donut to Order</button>
+        <button input type="submit" id="submitOrderButton">Submit Order</button>
+        <button input type="submit" id="exitOrderButton">Exit</button>
+    </div>
+    <div id="addDonutsModal" class="modal">
+        <h1>Add Donuts</h1>
+        <div id="addDonutsContainer">
+        </div>
+        <button type="submit" id="addDonutsSubmitButton">Submit</button>
+        <button type="submit" id="exitDonutsSubmitButton">Exit</button>
+    </div>
+    <div id="createDonutsModal" class="modal">
+        <div id="newDonutContainer">
+            <h1>Create New Donut</h1>
+            <label for="newDonutName">Enter A Donut Name: </label>
+            <input type="text" id="newDonutName">
+            <label for="newDonutPrice">Enter A Price: </label>
+            <input type ="text" id="newDonutPrice">
+            <button type="submit" id="submitNewDonutButton">Submit</button>
+            <button type="submit" id="exitNewDonutButton">Exit</button>
+        </div>
+    </div>
+    <div id="displayRevenueModal" class="modal">
+        <h1>Revenue</h1>
+        <div id="revenueContainer">
+        </div>
+        <button input type="submit" id="exitRevenue">Exit</button>
+    </div>
+</body>
+
+</html>

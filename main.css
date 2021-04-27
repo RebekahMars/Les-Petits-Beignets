@@ -1,0 +1,89 @@
+body {
+    background-image: url('donut-background.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+#shopSelectionBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#shopName{
+    width: 250px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: ghostwhite;
+}
+#submitShopName{
+    border-radius: 5px;
+    padding: 4px;
+    background-color: ghostwhite;
+}
+.modal {
+    background-color: ghostwhite;
+    position: absolute;
+    flex-direction: column;  
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+}
+#menuSelectionBox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+#menuSelectionBox button {
+    border-radius: 10px;
+    border-color: gray;
+    padding: 10px;
+}
+#menuSelectionBox button:hover {
+    cursor: pointer;
+    background-color: pink;
+}
+button:hover {
+    cursor: pointer;
+}
+
+#inventoryDisplayModal {
+    display: flex;
+    flex-direction: column;  
+}
+#addNewShopModal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+}
+#orderDonutsModal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: hidden;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
